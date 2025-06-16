@@ -1,4 +1,4 @@
-import './Home.css'
+import './Contact.module.css';
 
 const HeroSection = () => {
   return (
@@ -15,7 +15,6 @@ const HeroSection = () => {
         
         <h1>We make clothes that suit you</h1>
         <p>Experience bespoke tailoring that celebrates your individuality. Our master tailors combine traditional craftsmanship with modern design to create garments that fit not just your body, but your lifestyle. From precise measurements to personalized styling, we bring your vision to life with impeccable attention to detail.</p>
-        <button aria-label="Our services">OUR SERVICES</button>
       </div>
       <div className="hero-image">
         <div className="image-wrapper">

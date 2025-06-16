@@ -30,10 +30,10 @@ const ScrollToTop = () => {
       className={`scroll-to-top ${isVisible ? 'visible' : ''}`} 
       aria-label="Scroll to top" 
       title="Scroll to top" 
-      tabIndex="0"
+      tabIndex={isVisible ? 0 : -1}
       onClick={scrollToTop}
     >
-      <ArrowUpwardIcon />
+      <ArrowUpwardIcon fontSize="medium" />
     </button>
   )
 }

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import './Header.css'
 import MenuIcon from '@mui/icons-material/Menu'
 
@@ -7,13 +7,43 @@ const Header = ({ isMobileMenuOpen, toggleMobileMenu }) => {
   return (
     <header>
       <div className="header-inner container">
-        <Link to="/" className="logo" aria-label="Tailor brand logo" tabIndex="0">Tailor.</Link>
+        <NavLink to="/" className="logo" aria-label="Tailor brand logo" tabIndex="0">Tailor.</NavLink>
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <Link to="/" className="active" tabIndex="0">Home</Link>
-          <Link to="/about" tabIndex="0">About</Link>
-          <Link to="/services" tabIndex="0">Services</Link>
-          <Link to="/blog" tabIndex="0">Blog</Link>
-          <Link to="/contact" tabIndex="0">Contact</Link>
+          <NavLink 
+            to="/" 
+            className={({ isActive }) => isActive ? "active" : ""}
+            tabIndex="0"
+          >
+            Home
+          </NavLink>
+          <NavLink 
+            to="/about" 
+            className={({ isActive }) => isActive ? "active" : ""}
+            tabIndex="0"
+          >
+            About
+          </NavLink>
+          <NavLink 
+            to="/services" 
+            className={({ isActive }) => isActive ? "active" : ""}
+            tabIndex="0"
+          >
+            Services
+          </NavLink>
+          <NavLink 
+            to="/blog" 
+            className={({ isActive }) => isActive ? "active" : ""}
+            tabIndex="0"
+          >
+            Blog
+          </NavLink>
+          <NavLink 
+            to="/contact" 
+            className={({ isActive }) => isActive ? "active" : ""}
+            tabIndex="0"
+          >
+            Contact
+          </NavLink>
         </nav>
         <button className="visit-button" aria-label="Visit us button">Visit us</button>
         <button 
@@ -32,11 +62,41 @@ const Header = ({ isMobileMenuOpen, toggleMobileMenu }) => {
         aria-label="Mobile navigation" 
         hidden={!isMobileMenuOpen}
       >
-        <Link to="/" tabIndex="0">Home</Link>
-        <Link to="/about" tabIndex="0">About</Link>
-        <Link to="/services" tabIndex="0">Services</Link>
-        <Link to="/blog" tabIndex="0">Blog</Link>
-        <Link to="/contact" tabIndex="0">Contact</Link>
+        <NavLink 
+          to="/" 
+          className={({ isActive }) => isActive ? "active" : ""}
+          tabIndex="0"
+        >
+          Home
+        </NavLink>
+        <NavLink 
+          to="/about" 
+          className={({ isActive }) => isActive ? "active" : ""}
+          tabIndex="0"
+        >
+          About
+        </NavLink>
+        <NavLink 
+          to="/services" 
+          className={({ isActive }) => isActive ? "active" : ""}
+          tabIndex="0"
+        >
+          Services
+        </NavLink>
+        <NavLink 
+          to="/blog" 
+          className={({ isActive }) => isActive ? "active" : ""}
+          tabIndex="0"
+        >
+          Blog
+        </NavLink>
+        <NavLink 
+          to="/contact" 
+          className={({ isActive }) => isActive ? "active" : ""}
+          tabIndex="0"
+        >
+          Contact
+        </NavLink>
       </nav>
     </header>
   )
