@@ -1,5 +1,3 @@
-import './Contact.module.css';
-
 const HeroSection = () => {
   return (
     <section className="hero" role="banner" aria-label="Tailor hero section">
@@ -13,12 +11,12 @@ const HeroSection = () => {
           </svg>
         </div>
         
-        <h1>We make clothes that suit you</h1>
+        <h1>About Us</h1>
         <p>Experience bespoke tailoring that celebrates your individuality. Our master tailors combine traditional craftsmanship with modern design to create garments that fit not just your body, but your lifestyle. From precise measurements to personalized styling, we bring your vision to life with impeccable attention to detail.</p>
       </div>
       <div className="hero-image">
         <div className="image-wrapper">
-          <img src="https://preview.colorlib.com/theme/tailor/assets/img/hero/h1_hero1.png.webp" alt="Tailor woman measuring fabric on mannequin in tailoring workshop" />
+          <img src="https://www.fashion-schools.org/files/styles/large/public/images/careers/tailor.jpg" alt="Tailor woman measuring fabric on mannequin in tailoring workshop" />
           <div className="image-decoration"></div>
         </div>
       </div>

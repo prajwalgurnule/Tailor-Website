@@ -1,0 +1,573 @@
+.servicesPage {
+  color: #0b1033;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero Section */
+.servicesHero {
+  position: relative;
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.heroVideoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(28, 39, 79, 0.7);
+  z-index: 1;
+}
+
+.heroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.servicesHero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.servicesHero h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.servicesHero .subtitle {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  opacity: 0.9;
+  line-height: 1.6;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #c69b7b;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Section Header */
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sectionHeader h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionHeader h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #c69b7b;
+  border-radius: 2px;
+}
+
+.sectionHeader .subtitle {
+  font-size: 1.2rem;
+  color: #6d6d6d;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Services Showcase */
+.servicesShowcase {
+  padding: 120px 0;
+  background: white;
+}
+
+.tabsContainer {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.tabsNav {
+  display: flex;
+  border-bottom: 1px solid #be2d2d;
+}
+
+.tabButton {
+  flex: 1;
+  padding: 20px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: none;
+  color: #aa9381;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tabButton:hover {
+  color: #c69b7b;
+}
+
+.tabButton.active {
+  color: #0b1033;
+  border-bottom: 3px solid;
+}
+
+.tabContent {
+  padding: 0;
+}
+
+.tabPane {
+  display: flex;
+  min-height: 500px;
+}
+
+.serviceDetails {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.serviceDetails h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0b1033;
+}
+
+.serviceDetails p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #6d6d6d;
+  margin-bottom: 30px;
+}
+
+.serviceFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.serviceFeatures li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.1rem;
+}
+
+.checkIcon {
+  color: #c69b7b;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.ctaButton {
+  align-self: flex-start;
+  background: #c69b7b;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #a3765d;
+}
+
+.serviceImage {
+  flex: 1;
+  position: relative;
+  min-height: 300px;
+}
+
+.serviceImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+}
+
+/* Services Grid */
+.servicesGridSection {
+  padding: 100px 0;
+  background: #f8f2ec;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Make cards stack on mobile */
+@media (max-width: 1024px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.serviceCard {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.iconContainer {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  transition: all 0.3s ease;
+}
+
+.serviceIcon {
+  width: 50px;
+  height: 50px;
+  filter: brightness(0) invert(1);
+}
+
+.serviceCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #0b1033;
+}
+
+.serviceCard p {
+  color: #6d6d6d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.cardHoverEffect {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  transition: width 0.3s ease;
+}
+
+/* Process Timeline */
+.processSection {
+  padding: 120px 0;
+  background: white;
+}
+
+.processTimeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 60px;
+  margin-bottom: 50px;
+}
+
+.timelineDot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #c69b7b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+.timelineContent {
+  background: #f8f2ec;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.timelineContent h4 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #0b1033;
+}
+
+.timelineContent p {
+  color: #6d6d6d;
+  line-height: 1.6;
+}
+
+.timelineConnector {
+  position: absolute;
+  left: 15px;
+  top: 30px;
+  bottom: -50px;
+  width: 2px;
+  background: #c69b7b;
+}
+
+/* Testimonials */
+.testimonialsSection {
+  padding: 120px 0;
+  background: #f8f2ec;
+}
+
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonialCard {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.quoteIcon {
+  color: #c69b7b;
+  font-size: 2rem;
+  opacity: 0.2;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.testimonialText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4c4c4c;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.testimonialAuthor {
+  display: flex;
+  align-items: center;
+}
+
+.authorInfo h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #0b1033;
+}
+
+.authorInfo p {
+  color: #6d6d6d;
+  font-size: 0.9rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 100px 0;
+  background: linear-gradient(rgba(28, 39, 79, 0.9), rgba(28, 39, 79, 0.9));
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.ctaContent h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #c69b7b;
+  border-radius: 2px;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  opacity: 0.9;
+}
+
+.ctaButton {
+  background: #c69b7b;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .servicesHero h1 {
+    font-size: 3.5rem;
+  }
+  
+  .tabPane {
+    flex-direction: column;
+  }
+  
+  .serviceImage {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .servicesHero {
+    min-height: 600px;
+  }
+  
+  .servicesHero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2.2rem;
+  }
+  
+  .tabsNav {
+    flex-wrap: wrap;
+  }
+  
+  .tabButton {
+    min-width: 50%;
+  }
+  
+  .serviceDetails {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .servicesHero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .servicesHero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .sectionHeader h2 {
+    font-size: 2rem;
+  }
+  
+  .serviceDetails {
+    padding: 30px;
+  }
+  
+  .serviceDetails h3 {
+    font-size: 1.5rem;
+  }
+  
+  .timelineItem {
+    padding-left: 40px;
+  }
+  
+  .timelineDot {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .servicesHero {
+    min-height: 500px;
+  }
+  
+  .servicesHero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .tabsNav {
+    flex-direction: column;
+  }
+  
+  .tabButton {
+    min-width: 100%;
+  }
+  
+  .serviceDetails {
+    padding: 30px 20px;
+  }
+  
+  .ctaContent h2 {
+    font-size: 2rem;
+  }
+}

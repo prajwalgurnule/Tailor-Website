@@ -29,19 +29,19 @@ const Footer = () => {
                 </tr>
                 <tr>
                   <td className="table-label"></td>
-                  <td><a href="#">About</a></td>
+                  <td><a href="\about">About</a></td>
                 </tr>
                 <tr>
                   <td className="table-label"></td>
-                  <td><a href="#">Services</a></td>
+                  <td><a href="\services">Services</a></td>
                 </tr>
                 <tr>
                   <td className="table-label"></td>
-                  <td><a href="#">Blog</a></td>
+                  <td><a href="\blog">Blog</a></td>
                 </tr>
                 <tr>
                   <td className="table-label"></td>
-                  <td><a href="#">Contact</a></td>
+                  <td><a href="\contact">Contact</a></td>
                 </tr>
               </tbody>
             </table>

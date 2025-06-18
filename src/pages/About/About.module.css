@@ -1,0 +1,458 @@
+.aboutPage {
+  color: #0b1033;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Hero Section */
+.aboutHero {
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 160px 0 200px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutHero h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.aboutHero p {
+  font-size: 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+.scrollDown {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #c69b7b;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+/* Story Section */
+.storySection {
+  padding: 120px 0;
+  background: white;
+  position: relative;
+}
+
+.parallaxNeedle {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 150px;
+  opacity: 0.1;
+  z-index: 0;
+  transform: translateY(-50%);
+}
+
+.parallaxNeedle img {
+  width: 100%;
+  height: auto;
+}
+
+.storyContainer {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.storyImage {
+  flex: 1;
+  position: relative;
+}
+
+.storyImage img {
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transform: rotate(-2deg);
+  transition: transform 0.5s ease;
+}
+
+.storyImage:hover img {
+  transform: rotate(0deg);
+}
+
+.imageBorder {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: 20px;
+  bottom: 20px;
+  border: 2px solid #c69b7b;
+  border-radius: 12px;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+
+.storyImage:hover .imageBorder {
+  top: -15px;
+  left: -15px;
+  right: 15px;
+  bottom: 15px;
+}
+
+.storyContent {
+  flex: 1;
+}
+
+.storyContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.storyContent h2 span {
+  color: #c69b7b;
+}
+
+.storyContent h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #c69b7b;
+}
+
+.storyContent .lead {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #171d41;
+}
+
+.storyContent p {
+  margin-bottom: 30px;
+  line-height: 1.8;
+  color: #4c4c4c;
+}
+
+.stats {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.statItem {
+  text-align: center;
+  background: #f8f2ec;
+  padding: 30px 20px;
+  border-radius: 8px;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.statItem:hover {
+  background: #c69b7b;
+  color: white;
+}
+
+.statItem:hover h3,
+.statItem:hover p {
+  color: white;
+}
+
+.statItem:hover .statIcon {
+  color: white;
+}
+
+.statIcon {
+  font-size: 2rem;
+  color: #c69b7b;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.statItem h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #0b1033;
+  transition: all 0.3s ease;
+}
+
+.statItem p {
+  font-size: 1rem;
+  color: #6d6d6d;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+/* Team Section */
+.teamSection {
+  padding: 120px 0;
+  background: #f8f2ec;
+}
+
+.teamSection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+}
+
+.teamSection h2 span {
+  color: #c69b7b;
+}
+
+.teamContainer {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.teamContent {
+  flex: 1;
+}
+
+.teamContent p {
+  margin-bottom: 30px;
+  line-height: 1.8;
+  color: #4c4c4c;
+  font-size: 1.1rem;
+}
+
+.teamList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.teamList li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.1rem;
+}
+
+.checkIcon {
+  color: #c69b7b;
+  margin-right: 15px;
+  font-size: 1.2rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.teamImage {
+  flex: 1;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.teamImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.imageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(198, 155, 123, 0.1), rgba(28, 39, 79, 0.3));
+  z-index: 1;
+}
+
+/* Process Section */
+.processSection {
+  padding: 120px 0;
+  background: white;
+}
+
+.processSection h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.processSection h2 span {
+  color: #c69b7b;
+}
+
+.processSection .subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  color: #6d6d6d;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.processSteps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.step {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #c69b7b;
+  transition: all 0.3s ease;
+}
+
+.step:hover::before {
+  height: 100%;
+  opacity: 0.1;
+}
+
+.stepNumber {
+  width: 60px;
+  height: 60px;
+  background: #c69b7b;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.step h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #0b1033;
+  position: relative;
+  z-index: 2;
+}
+
+.step p {
+  color: #6d6d6d;
+  line-height: 1.6;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .aboutHero h1 {
+    font-size: 3rem;
+  }
+  
+  .aboutHero p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .storyContainer,
+  .teamContainer {
+    flex-direction: column;
+  }
+  
+  .storyImage,
+  .teamImage,
+  .storyContent,
+  .teamContent {
+    width: 100%;
+  }
+  
+  .stats {
+    flex-wrap: wrap;
+  }
+  
+  .statItem {
+    min-width: calc(50% - 15px);
+  }
+  
+  .parallaxNeedle {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutHero {
+    padding: 120px 0 160px;
+    background-attachment: scroll;
+  }
+  
+  .aboutHero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .storySection,
+  .teamSection,
+  .processSection {
+    padding: 80px 0;
+  }
+  
+  .storyContent h2,
+  .teamSection h2,
+  .processSection h2 {
+    font-size: 2rem;
+  }
+  
+  .processSteps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .aboutHero h1 {
+    font-size: 2rem;
+  }
+  
+  .statItem {
+    min-width: 100%;
+  }
+  
+  .step {
+    padding: 30px 20px;
+  }
+}
