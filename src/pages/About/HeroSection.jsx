@@ -16,7 +16,7 @@ const HeroSection = () => {
       </div>
       <div className="hero-image">
         <div className="image-wrapper">
-          <img src="https://www.fashion-schools.org/files/styles/large/public/images/careers/tailor.jpg" alt="Tailor woman measuring fabric on mannequin in tailoring workshop" />
+          <img src="https://preview.colorlib.com/theme/tailor/assets/img/hero/h1_hero1.png.webp" alt="Tailor woman measuring fabric on mannequin in tailoring workshop" />
           <div className="image-decoration"></div>
         </div>
       </div>

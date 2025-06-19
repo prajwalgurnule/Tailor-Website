@@ -7,6 +7,7 @@ import Contact from './pages/Contact/Contact'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import About from './pages/About/About'
 import Services from './pages/Services/Services'
+import Blogs from './pages/Blog/Blog'
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -28,6 +29,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/blog" element={<Blogs />} />
             {/* Add other routes as needed */}
           </Routes>
         </main>
